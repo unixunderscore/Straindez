@@ -1,5 +1,6 @@
 package net.spiralmc.straindez;
 
+import org.bukkit.Bukkit;
 import org.bukkit.configuration.Configuration;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -21,7 +22,7 @@ public final class Straindez extends JavaPlugin implements Listener {
         Configuration config = getConfig();
 
         if (config.getStringList("bad-players").contains(e.getPlayer().getName())) {
-            player.banPlayer("You're an idiot!");
+            Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "ban " + player.getName());
         }
     }
 }
