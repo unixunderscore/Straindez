@@ -1,0 +1,4 @@
+name: Straindez
+version: '${project.version}'
+main: net.spiralmc.straindez.Straindez
+api-version: '1.20'
